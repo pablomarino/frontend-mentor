@@ -92,7 +92,7 @@ main{
   margin-bottom: 24px;
 }
 .product-price{
-  font-size: 24px;
+  font-size: 1.5em;/*24px;*/
   color:hsl(158, 30%, 41%);
   font-family: 'Fraunces', serif;
 }
@@ -111,7 +111,7 @@ main{
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1em;/*16px;*/
   cursor:pointer;
 }
 
@@ -125,10 +125,27 @@ main{
     background-image: url('../images/image-product-mobile.jpg');
     width: 340px;
     height: 240px;
+    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0 ;
   }
   .product-info{
     width: 340px;
     height: 370px;
-    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0 ;
+    padding: 20px;
+    
+  }
+  .product-type{
+    margin-bottom: 10px;
+  }
+  
+  .product-name{
+    margin-bottom: 14px;
+  }
+  
+  .product-description{
+    margin-bottom: 20px;
+  }
+
+  .product-price{
+    font-size: 1.88em;/*30px;*/
   }
 }
