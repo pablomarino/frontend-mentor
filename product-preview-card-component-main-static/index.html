@@ -30,26 +30,26 @@
 
 <body>
   <main>
-    <div class="preview-card" role="contentinfo">
-      <img class="product-img"> <!--  alt="Product preview image" -->
-      <section class="product-info">
+    <article class="preview-card">
+      <figure class="product-img" role="img" aria-label="Product preview image" alt="Product preview image"></figure> <!--  alt="Product preview image" -->
+      <div class="product-info">
 
         <span class="product-type">Preview</span>
 
         <h1 class="product-name">Gabrielle Essence Eau De Parfum</h1>
 
-        <span class="product-description">A floral, solar and voluptuous interpretation composed by Olivier Polge,
-          Perfumer-Creator for the House of CHANEL.</span>
-        <section class="product-price-container">
+        <div class="product-description">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.</div>
+        <div class="product-price-container">
           <span class="product-price">$149.99</span>
           <span class="product-old-price">$169.99</span>
-        </section>
+        </div>
         <button class="product-add-to-cart" onclick="alert('You pressed the button!')">
-          <object data="./images/icon-cart.svg" type="image/svg+xml" alt="Cart icon"></object>
+          <object data="./images/icon-cart.svg" type="image/svg+xml" aria-label="Cart icon" ></object>
           Add to Cart
         </button>
-      </section>
-    </div>
+      </div>
+    </article>
   </main>
   <footer>
     <div class="attribution">

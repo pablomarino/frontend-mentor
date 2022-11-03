@@ -13,7 +13,7 @@
   box-sizing: border-box;
 
   --color-grayishblue: hsl(220, 15%, 55%);
-  --card-border-radius:5px;
+  --card-border-radius:10px;
 }
 
 body{
@@ -72,6 +72,7 @@ main{
 .product-name{
   width: 100%;
   display: inline-block;
+  line-height: 35px;
   font-weight: 700;
   margin-bottom: 24px;
   font-family: 'Fraunces', serif;
@@ -80,6 +81,7 @@ main{
 
 .product-description{
   display: inline-block;
+  line-height: 22px;
   color: var(--color-grayishblue);
   margin-bottom: 24px;
 }
@@ -92,7 +94,7 @@ main{
   margin-bottom: 24px;
 }
 .product-price{
-  font-size: 1.5em;/*24px;*/
+  font-size: 2em;/*24px;*/
   color:hsl(158, 30%, 41%);
   font-family: 'Fraunces', serif;
 }
@@ -103,7 +105,7 @@ main{
 }
 .product-add-to-cart{
   width: 100%;
-  background-color: hsl(156, 42%, 18%); 
+  background-color: hsl(158, 30%, 41%); 
   border: none;
   border-radius: var(--card-border-radius);
   color: white;
@@ -113,6 +115,9 @@ main{
   display: inline-block;
   font-size: 1em;/*16px;*/
   cursor:pointer;
+}
+.product-add-to-cart:hover{
+  background-color: hsl(156, 42%, 18%); 
 }
 
 @media only screen and (max-width: 375px) {
