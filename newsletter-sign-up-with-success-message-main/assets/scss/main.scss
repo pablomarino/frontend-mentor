@@ -47,7 +47,12 @@ main{
   //align-items: center;
 }
 
+#success_message{
+  display: none;
+} 
+
 ul {
+  list-style: none;
   li::before {
     content: "";
     display: inline-block;
