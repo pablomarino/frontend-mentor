@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  background-color: #36384d; }
+
+.window {
+  background-color: #ffffff; }
+
+ul li::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/icon-list.svg");
+  background-size: cover;
+  margin: 0 10px 0 10px; }
+
+button {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #3d768a;
+  background: #232742;
+  box-shadow: 0px 10px 14px -7px #276873;
+  border-radius: 8px;
+  display: inline-block; }
+  button :hover {
+    color: #bdc1ff;
+    background: linear-gradient(to right, #ff527b 100%, #fd6839 100%); }
+  button :active {
+    color: #bdc1ff; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+  .attribution a {
+    color: #36384e; }
