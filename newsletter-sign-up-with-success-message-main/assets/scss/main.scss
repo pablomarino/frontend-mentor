@@ -1,3 +1,5 @@
+$radius: 3.7rem;
+
 @mixin flex($direction, $justify, $align) {
   display: flex;
   flex-direction: $direction;
@@ -10,7 +12,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; 
+  box-sizing: inherit;
 }
 
 @font-face {
@@ -27,69 +29,108 @@
 
 html {
   background-color: #36384d;
-  font-size: 1rem;
+  font-size: 62.5%; // 1rem = 10px
   font-family: "Roboto", sans-serif;
   font-weight: regular;
 }
 
-main{
+main {
   @include flex(vertical, center, center);
   width: 100%;
   height: 100vh;
 }
-.window{
+
+.signup_window {
   background-color: #ffffff;
-  border-radius: 1rem;
-  //width: 100%;
-  //height: 100vh;
-  //display: flex;
-  //justify-content: center;
-  //align-items: center;
-}
+  border-radius: $radius;
+  width: 92.5rem;
+  height: 64.0rem;
+  display: flex;
+  align-items: center;
 
-#success_message{
-  display: none;
-} 
+  .signup_form {
+    flex:1;
+    height: 100%;
+    margin: 19rem 0 0 6.5rem;
+    
 
-ul {
-  list-style: none;
-  li::before {
-    content: "";
-    display: inline-block;
-    width: 1.2rem;
-    height: 1.2rem;
-    background-image: url('../images/icon-list.svg');
-    background-size: cover;
-    margin: 0 1rem 0 1rem;
+    h1{
+      font-size: 5.5rem;
+      font-weight: bold;
+      color: #232742;
+      margin: 0 0 1rem 0;
+      letter-spacing: .04rem;
+    }
+
+    h3{
+      font-size: 1.55rem;
+      font-weight: regular;
+      color: #232742;
+      
+      margin: 2rem 0;
+      line-height: 2.4rem;
+    }
+
+    ul{
+      list-style: none;
+      margin: 0 0 2rem 0;
+
+      li{
+        font-size: 1.6rem;
+        font-weight: regular;
+        line-height: 3.4rem;
+      }
+
+      li::before {
+        content: "";
+        display: inline-block;
+        width: 2.2rem;
+        height: 2.2rem;
+        background-image: url("../images/icon-list.svg");
+        background-size: cover;
+        margin: 0 1.5rem 0 0;
+      }
+    }
+  }
+  .signup_image {
+    display: block;
+    width: 40rem;
+    height: 59.3rem;
+    margin: 2.5rem;
+    background-image: url("../images/illustration-sign-up-desktop.svg");
+    background-size: cover; /* Adjusts the image size to cover the entire container */
+    background-position: center; /* Centers the image within the container */
   }
 }
 
-button{
+.success_message {
+  display: none;
+  background-color: #ffffff;
+  border-radius: $radius;
+}
+button {
   cursor: pointer;
   color: white;
   text-decoration: none;
-  text-shadow:0px 1px 0px #3d768a;
-  background:#232742;
-  box-shadow: 0px 10px 14px -7px #276873;
-	border-radius:.8rem;
-	display:inline-block;
-	
+  text-shadow: 0 1px 0 #3d768a;
+  background: #232742;
+  box-shadow: 0 10px 14px -7px #276873;
+  border-radius: $radius;
+  display: inline-block;
   
-
-
-  :hover{
+  :hover {
     color: hsl(236, 100%, 87%);
-    background:linear-gradient(to right, #ff527b 100%, #fd6839 100%);
+    background: linear-gradient(to right, #ff527b 100%, #fd6839 100%);
   }
-  :active{
+  :active {
     color: hsl(236, 100%, 87%);
   }
 }
 
-.attribution { 
-  font-size: 1.1rem; 
-  text-align: center; 
-  a { 
-    color: hsl(235, 18%, 26%); 
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  a {
+    color: hsl(235, 18%, 26%);
   }
 }
