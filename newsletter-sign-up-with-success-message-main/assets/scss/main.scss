@@ -24,14 +24,14 @@ $radius: 3.7rem;
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.ttf") format("truetype");
-  font-weight: regular;
+  font-weight: 400;
 }
 
 html {
   background-color: #36384d;
   font-size: 62.5%; // 1rem = 10px
   font-family: "Roboto", sans-serif;
-  font-weight: regular;
+  font-weight: 400;
 }
 
 main {
@@ -49,12 +49,13 @@ main {
   align-items: center;
 
   .signup_form {
-    flex:1;
+    flex: 1;
+    width: 100%;
     height: 100%;
-    margin: 19rem 0 0 6.5rem;
-    
+    margin: 19rem 2.5rem 0 6.5rem;
 
-    h1{
+
+    h1 {
       font-size: 5.5rem;
       font-weight: bold;
       color: #232742;
@@ -62,28 +63,29 @@ main {
       letter-spacing: .04rem;
     }
 
-    h3{
+    h3 {
       font-size: 1.55rem;
-      font-weight: regular;
+      font-weight: 400;
       color: #232742;
-      
+
       margin: 2rem 0;
       line-height: 2.4rem;
     }
 
-    ul{
+    ul {
       list-style: none;
       margin: 0 0 2rem 0;
 
-      li{
+      li {
         font-size: 1.6rem;
-        font-weight: regular;
+        font-weight: 400;
         line-height: 3.4rem;
       }
 
       li::before {
         content: "";
         display: inline-block;
+        vertical-align: middle;
         width: 2.2rem;
         height: 2.2rem;
         background-image: url("../images/icon-list.svg");
@@ -91,38 +93,116 @@ main {
         margin: 0 1.5rem 0 0;
       }
     }
+
+    form {
+      label {
+        display: block;
+        margin: 3.9rem 0 1rem 0;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      input {
+        display: block;
+        width: 37.4rem;
+        height: 5.2rem;
+        border-radius: 1rem;
+        border: 1px solid #232742;
+        margin-bottom: 2.5rem;
+        text-indent: 2rem;
+
+      }
+
+      input::placeholder {
+        font-size: 1.7rem;
+        font-weight: 400;
+        color: #8b97c6;
+
+      }
+    }
+
+    button {
+      border: none;
+      font-weight: bold;
+      font-size: 1.44rem;
+      display: block;
+      border-radius: 1rem;
+      width: 37.4rem;
+      height: 5.2rem;
+      color: white;
+      text-decoration: none;
+      background: #232742;
+      box-shadow: 0 10px 14px -7px #276873;
+      cursor: pointer;
+    }
+
+    button:hover {
+      color: hsl(236, 100%, 87%);
+      background: linear-gradient(to right, #ff527b 100%, #fd6839 100%);
+    }
+
+    button:active {
+      color: hsl(236, 100%, 87%);
+    }
   }
+
   .signup_image {
     display: block;
     width: 40rem;
     height: 59.3rem;
     margin: 2.5rem;
     background-image: url("../images/illustration-sign-up-desktop.svg");
-    background-size: cover; /* Adjusts the image size to cover the entire container */
-    background-position: center; /* Centers the image within the container */
+    background-size: cover;
+    /* Adjusts the image size to cover the entire container */
+    background-position: center;
+    /* Centers the image within the container */
   }
 }
 
 .success_message {
-  display: none;
+  display: flex;
   background-color: #ffffff;
   border-radius: $radius;
-}
-button {
-  cursor: pointer;
-  color: white;
-  text-decoration: none;
-  text-shadow: 0 1px 0 #3d768a;
-  background: #232742;
-  box-shadow: 0 10px 14px -7px #276873;
-  border-radius: $radius;
-  display: inline-block;
+  width:50.5rem;
+  height:52rem;
+  h1 {
+    font-size: 5.5rem;
+    font-weight: bold;
+    color: #232742;
+    margin: 0 0 1rem 0;
+    letter-spacing: .04rem;
+  }
+
+  h3 {
+    font-size: 1.55rem;
+    font-weight: 400;
+    color: #232742;
+
+    margin: 2rem 0;
+    line-height: 2.4rem;
+  }
   
-  :hover {
+  button {
+    border: none;
+    font-weight: bold;
+    font-size: 1.44rem;
+    display: block;
+    border-radius: 1rem;
+    width: 37.4rem;
+    height: 5.2rem;
+    color: white;
+    text-decoration: none;
+    background: #232742;
+    box-shadow: 0 10px 14px -7px #276873;
+    cursor: pointer;
+  }
+
+  button:hover {
     color: hsl(236, 100%, 87%);
     background: linear-gradient(to right, #ff527b 100%, #fd6839 100%);
   }
-  :active {
+
+  button:active {
     color: hsl(236, 100%, 87%);
   }
 }
@@ -130,6 +210,7 @@ button {
 .attribution {
   font-size: 1.1rem;
   text-align: center;
+
   a {
     color: hsl(235, 18%, 26%);
   }
