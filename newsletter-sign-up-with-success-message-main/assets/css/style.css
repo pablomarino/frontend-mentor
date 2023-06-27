@@ -178,3 +178,24 @@ main {
   text-align: center; }
   .attribution a {
     color: #36384e; }
+
+@media screen and (max-width: 630px) {
+  .signup_window {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+    border-radius: 0; }
+    .signup_window .signup_image {
+      width: 100%;
+      height: 50rem;
+      background-image: url("../images/illustration-sign-up-desktop.svg");
+      background-size: cover;
+      background-position: center; }
+    .signup_window .signup_form {
+      margin: 2rem; }
+      .signup_window .signup_form button {
+        margin-bottom: 10rem; }
+  .success_message {
+    width: 100%;
+    height: 100%;
+    border-radius: 0; } }

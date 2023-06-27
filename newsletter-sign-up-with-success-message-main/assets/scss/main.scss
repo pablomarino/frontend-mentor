@@ -1,4 +1,8 @@
-$radius: 3.7rem;
+$window-radius: 3.7rem;
+$button-radius: 1rem;
+$breakpoint-mobile: 630px;
+$breakpoint-desktop: 1440px;
+
 
 @mixin flex($direction, $justify, $align) {
   display: flex;
@@ -45,11 +49,11 @@ main {
   align-items: center;
   display: none;
   background-color: #ffffff;
-  border-radius: $radius;
+  border-radius: $window-radius;
   width: 92.5rem;
   height: 64.0rem;
-  
-  
+
+
 
   .signup_form {
     flex: 1;
@@ -120,7 +124,7 @@ main {
         display: block;
         width: 37.4rem;
         height: 5.2rem;
-        border-radius: 1rem;
+        border-radius: $button-radius;
         border: 1px solid #232742;
         margin-bottom: 2.8rem;
         text-indent: 2rem;
@@ -175,18 +179,19 @@ main {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
-  border-radius: $radius;
+  border-radius: $window-radius;
   width: 50.5rem;
   height: 52rem;
-  
-  .success_image{
-   
+
+  .success_image {
+
     width: 6.5rem;
     height: 6.5rem;
     margin: 5rem 0 0rem 6.4rem;
     background-image: url("../images/icon-success.svg");
     background-size: cover;
   }
+
   h1 {
     width: 50rem;
     font-size: 5.5rem;
@@ -195,10 +200,11 @@ main {
     margin: 3.8rem 0 0 6.4rem;
     letter-spacing: .04rem;
     line-height: 5.5rem;
+
   }
 
   h3 {
-    
+
     font-size: 1.55rem;
     font-weight: 400;
     color: #232742;
@@ -211,7 +217,7 @@ main {
     border: none;
     font-weight: bold;
     font-size: 1.5rem;
-    border-radius: 1rem;
+    border-radius: $button-radius;
     width: 37.4rem;
     height: 5.6rem;
     color: white;
@@ -222,10 +228,10 @@ main {
     margin: 4rem 0 0 6.5rem;
   }
 
-p{
-  display: inline;
-  font-weight: bold;
-}
+  p {
+    display: inline;
+    font-weight: bold;
+  }
 
   button:hover {
     color: hsl(236, 100%, 87%);
@@ -235,6 +241,8 @@ p{
   button:active {
     color: hsl(236, 100%, 87%);
   }
+
+
 }
 
 .attribution {
@@ -243,5 +251,38 @@ p{
 
   a {
     color: hsl(235, 18%, 26%);
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .signup_window {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+
+
+    .signup_image {
+      //display: flex;
+      width: 100%;
+      height: 50rem;
+      background-image: url("../images/illustration-sign-up-desktop.svg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .signup_form {
+      margin: 2rem;
+
+      button {
+        margin-bottom: 10rem;
+      }
+    }
+  }
+
+  .success_message {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
   }
 }
