@@ -5,38 +5,164 @@
   padding: 0;
   box-sizing: inherit; }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
 html {
-  background-color: #36384d; }
+  background-color: #36384d;
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; }
 
-.window {
-  background-color: #ffffff; }
+main {
+  display: flex;
+  flex-direction: vertical;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; }
 
-ul li::before {
-  content: "";
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background-image: url("../images/icon-list.svg");
-  background-size: cover;
-  margin: 0 10px 0 10px; }
+.signup_window {
+  background-color: #ffffff;
+  border-radius: 3.7rem;
+  width: 92.5rem;
+  height: 64.0rem;
+  display: flex;
+  align-items: center; }
+  .signup_window .signup_form {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    margin: 17.6rem 2.5rem 0 6.5rem; }
+    .signup_window .signup_form h1 {
+      font-size: 5.5rem;
+      font-weight: bold;
+      color: #232742;
+      margin: 0 0 1rem 0;
+      letter-spacing: .04rem; }
+    .signup_window .signup_form h3 {
+      font-size: 1.55rem;
+      font-weight: 400;
+      color: #232742;
+      margin: 2rem 0;
+      line-height: 2.4rem; }
+    .signup_window .signup_form ul {
+      list-style: none;
+      margin: 0 0 2rem 0; }
+      .signup_window .signup_form ul li {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 3.4rem; }
+      .signup_window .signup_form ul li::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 2.2rem;
+        height: 2.2rem;
+        background-image: url("../images/icon-list.svg");
+        background-size: cover;
+        margin: 0 1.5rem 0 0; }
+    .signup_window .signup_form form {
+      position: relative; }
+      .signup_window .signup_form form label {
+        display: block;
+        margin: 3.9rem 0 1rem 0;
+        font-size: 1.2rem;
+        font-weight: bold; }
+      .signup_window .signup_form form .error_message {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        font-size: 1.2rem;
+        font-weight: bold; }
+      .signup_window .signup_form form input {
+        display: block;
+        width: 37.4rem;
+        height: 5.2rem;
+        border-radius: 1rem;
+        border: 1px solid #232742;
+        margin-bottom: 2.8rem;
+        text-indent: 2rem; }
+      .signup_window .signup_form form input::placeholder {
+        font-size: 1.7rem;
+        font-weight: 400;
+        color: #8b97c6; }
+    .signup_window .signup_form button {
+      border: none;
+      font-weight: bold;
+      font-size: 1.44rem;
+      display: block;
+      border-radius: 1rem;
+      width: 37.4rem;
+      height: 5.2rem;
+      color: white;
+      text-decoration: none;
+      background: #232742;
+      box-shadow: 0 10px 14px -7px #276873;
+      cursor: pointer; }
+    .signup_window .signup_form button:hover {
+      color: #bdc1ff;
+      background: linear-gradient(to right, #ff527b 100%, #fd6839 100%); }
+    .signup_window .signup_form button:active {
+      color: #bdc1ff; }
+  .signup_window .signup_image {
+    display: block;
+    width: 40rem;
+    height: 59.3rem;
+    margin: 2.5rem;
+    background-image: url("../images/illustration-sign-up-desktop.svg");
+    background-size: cover;
+    /* Adjusts the image size to cover the entire container */
+    background-position: center;
+    /* Centers the image within the container */ }
 
-button {
-  cursor: pointer;
-  color: white;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #3d768a;
-  background: #232742;
-  box-shadow: 0px 10px 14px -7px #276873;
-  border-radius: 8px;
-  display: inline-block; }
-  button :hover {
+.success_message {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 3.7rem;
+  width: 50.5rem;
+  height: 52rem; }
+  .success_message h1 {
+    font-size: 5.5rem;
+    font-weight: bold;
+    color: #232742;
+    margin: 0 0 1rem 0;
+    letter-spacing: .04rem; }
+  .success_message h3 {
+    font-size: 1.55rem;
+    font-weight: 400;
+    color: #232742;
+    margin: 2rem 0;
+    line-height: 2.4rem; }
+  .success_message button {
+    border: none;
+    font-weight: bold;
+    font-size: 1.44rem;
+    display: block;
+    border-radius: 1rem;
+    width: 37.4rem;
+    height: 5.2rem;
+    color: white;
+    text-decoration: none;
+    background: #232742;
+    box-shadow: 0 10px 14px -7px #276873;
+    cursor: pointer; }
+  .success_message button:hover {
     color: #bdc1ff;
     background: linear-gradient(to right, #ff527b 100%, #fd6839 100%); }
-  button :active {
+  .success_message button:active {
     color: #bdc1ff; }
 
 .attribution {
-  font-size: 11px;
+  font-size: 1.1rem;
   text-align: center; }
   .attribution a {
     color: #36384e; }
