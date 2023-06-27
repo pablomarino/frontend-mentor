@@ -30,12 +30,13 @@ main {
   height: 100vh; }
 
 .signup_window {
+  display: flex;
+  align-items: center;
+  display: none;
   background-color: #ffffff;
   border-radius: 3.7rem;
   width: 92.5rem;
-  height: 64.0rem;
-  display: flex;
-  align-items: center; }
+  height: 64.0rem; }
   .signup_window .signup_form {
     flex: 1;
     width: 100%;
@@ -120,41 +121,52 @@ main {
     margin: 2.5rem;
     background-image: url("../images/illustration-sign-up-desktop.svg");
     background-size: cover;
-    /* Adjusts the image size to cover the entire container */
-    background-position: center;
-    /* Centers the image within the container */ }
+    background-position: center; }
 
 .success_message {
   display: flex;
+  flex-direction: column;
   background-color: #ffffff;
   border-radius: 3.7rem;
   width: 50.5rem;
   height: 52rem; }
+  .success_message .success_image {
+    width: 6.5rem;
+    height: 6.5rem;
+    margin: 5rem 0 0rem 6.4rem;
+    background-image: url("../images/icon-success.svg");
+    background-size: cover; }
   .success_message h1 {
+    width: 50rem;
     font-size: 5.5rem;
     font-weight: bold;
     color: #232742;
-    margin: 0 0 1rem 0;
-    letter-spacing: .04rem; }
+    margin: 3.8rem 0 0 6.4rem;
+    letter-spacing: .04rem;
+    line-height: 5.5rem; }
   .success_message h3 {
     font-size: 1.55rem;
     font-weight: 400;
     color: #232742;
-    margin: 2rem 0;
-    line-height: 2.4rem; }
+    margin: 2.5rem 8rem 0 6.5rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.02rem; }
   .success_message button {
     border: none;
     font-weight: bold;
-    font-size: 1.44rem;
-    display: block;
+    font-size: 1.5rem;
     border-radius: 1rem;
     width: 37.4rem;
-    height: 5.2rem;
+    height: 5.6rem;
     color: white;
     text-decoration: none;
     background: #232742;
     box-shadow: 0 10px 14px -7px #276873;
-    cursor: pointer; }
+    cursor: pointer;
+    margin: 4rem 0 0 6.5rem; }
+  .success_message p {
+    display: inline;
+    font-weight: bold; }
   .success_message button:hover {
     color: #bdc1ff;
     background: linear-gradient(to right, #ff527b 100%, #fd6839 100%); }

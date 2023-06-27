@@ -7,6 +7,7 @@
   <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="assets/js/main.js"></script>
 
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
@@ -17,7 +18,7 @@
   <!-- Sign-up form start -->
 
   <main>
-    <div class="signup_window">
+    <div id="signup_window" class="signup_window">
       <div class="signup_form">
         <h1>Stay updated!</h1>
 
@@ -30,10 +31,10 @@
         </ul>
         <form>
           <label for="email">Email address</label>
-          <p class="error_message "></p>
+          <p id="error_message" class="error_message "></p>
           <input type="email" id="email" name="email" placeholder="ash@loremcompany.com" required>
         </form>
-        <button type="submit">Subscribe to monthly newsletter</button>
+        <button type="submit" onclick="submitForm(event)">Subscribe to monthly newsletter</button>
         </form>
       </div>
       <div class="signup_image"></div>
@@ -41,11 +42,12 @@
 
     <!-- Success message start -->
 
-    <div class="success_message">
+    <div id="success_message" class="success_message">
+      <div class="success_image"></div>
       <h1>Thanks for subscribing!</h1>
-      <h3>A confirmation email has been sent to ash@loremcompany.com.
+      <h3>A confirmation email has been sent to <p id="form_email">ash@loremcompany.com</p>.
         Please open it and click the button inside to confirm your subscription.</h3>
-      <button type="reset">Dismiss message</button>
+      <button type="reset" onclick="showSuscribe()">Dismiss message</button>
     </div>
   </main>
   <div class="attribution">

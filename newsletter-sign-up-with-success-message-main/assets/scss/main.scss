@@ -41,12 +41,15 @@ main {
 }
 
 .signup_window {
+  display: flex;
+  align-items: center;
+  display: none;
   background-color: #ffffff;
   border-radius: $radius;
   width: 92.5rem;
   height: 64.0rem;
-  display: flex;
-  align-items: center;
+  
+  
 
   .signup_form {
     flex: 1;
@@ -164,50 +167,65 @@ main {
     margin: 2.5rem;
     background-image: url("../images/illustration-sign-up-desktop.svg");
     background-size: cover;
-    /* Adjusts the image size to cover the entire container */
     background-position: center;
-    /* Centers the image within the container */
   }
 }
 
 .success_message {
   display: flex;
+  flex-direction: column;
   background-color: #ffffff;
   border-radius: $radius;
   width: 50.5rem;
   height: 52rem;
-
+  
+  .success_image{
+   
+    width: 6.5rem;
+    height: 6.5rem;
+    margin: 5rem 0 0rem 6.4rem;
+    background-image: url("../images/icon-success.svg");
+    background-size: cover;
+  }
   h1 {
+    width: 50rem;
     font-size: 5.5rem;
     font-weight: bold;
     color: #232742;
-    margin: 0 0 1rem 0;
+    margin: 3.8rem 0 0 6.4rem;
     letter-spacing: .04rem;
+    line-height: 5.5rem;
   }
 
   h3 {
+    
     font-size: 1.55rem;
     font-weight: 400;
     color: #232742;
-
-    margin: 2rem 0;
+    margin: 2.5rem 8rem 0 6.5rem;
     line-height: 2.4rem;
+    letter-spacing: 0.02rem;
   }
 
   button {
     border: none;
     font-weight: bold;
-    font-size: 1.44rem;
-    display: block;
+    font-size: 1.5rem;
     border-radius: 1rem;
     width: 37.4rem;
-    height: 5.2rem;
+    height: 5.6rem;
     color: white;
     text-decoration: none;
     background: #232742;
     box-shadow: 0 10px 14px -7px #276873;
     cursor: pointer;
+    margin: 4rem 0 0 6.5rem;
   }
+
+p{
+  display: inline;
+  font-weight: bold;
+}
 
   button:hover {
     color: hsl(236, 100%, 87%);
